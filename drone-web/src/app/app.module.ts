@@ -8,6 +8,9 @@ import { AuthComponent } from './auth/auth.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
+import { UserComponent } from './user/user.component';
+import { UserService } from './user/userService/userService';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,16 +18,19 @@ import { RegisterComponent } from './auth/register/register.component';
     AuthComponent,
     NavBarComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: 'login', component: LoginComponent}
+      { path: 'login', component: LoginComponent},
+      { path: 'user', component: UserComponent}
     ])
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
