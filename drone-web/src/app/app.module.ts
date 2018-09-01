@@ -27,8 +27,7 @@ import { FormsModule } from '@angular/forms';
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: 'login', component: LoginComponent},
-      { path: 'user', component: UserComponent},
-      { path: 'nav', component: NavBarComponent},
+      { path: 'user', component: UserComponent}
     ])
   ],
   providers: [UserService],

@@ -9,7 +9,6 @@ import { UserModel } from '../models/userModel';
 })
 export class UserComponent implements OnInit {
   public userModel: UserModel;
-  public test: "test";
 
   constructor(userService: UserService) {
     this.userModel = userService.getUserInfo();
